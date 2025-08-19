@@ -124,13 +124,13 @@ extension ProfileManager {
                     Exam(code: "ATI TEAS",
                          title: "Onboarding.Exams.Exam1.Name".localized,
                          subTitle: "Onboarding.Exams.Exam1.Text".localized,
-                         api: GlobalDefinitions.atiteasApiKey,
-                         domain: GlobalDefinitions.atiteasDomainUrl),
+                         api: GlobalDefinitions.nclexApiKey,
+                         domain: GlobalDefinitions.nclexDomainUrl),
                     Exam(code: "HESI",
                          title: "Onboarding.Exams.Exam2.Name".localized,
                          subTitle: "Onboarding.Exams.Exam2.Text".localized,
-                         api: GlobalDefinitions.hesiApiKey,
-                         domain: GlobalDefinitions.hesiDomainUrl)
+                         api: GlobalDefinitions.usmleApiKey,
+                         domain: GlobalDefinitions.usmleDomainUrl)
                 ]
                 
                 event(.success(exams))
@@ -225,8 +225,8 @@ private extension ProfileManager {
     }
     
     func loadProfile() -> Single<Profile?> {
-        let request = GetProfileRequest(domain: GlobalDefinitions.atiteasDomainUrl,
-                                        apiKey: GlobalDefinitions.atiteasApiKey,
+        let request = GetProfileRequest(domain: GlobalDefinitions.nclexDomainUrl,
+                                        apiKey: GlobalDefinitions.nclexApiKey,
                                         userToken: sessionManager.internalId)
         
         return defaultRequestWrapper
