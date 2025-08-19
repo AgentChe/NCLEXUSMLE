@@ -104,7 +104,6 @@ private extension SplashView {
             .textAlignment(.center)
         
         let view = UILabel()
-        view.numberOfLines = 0
         view.attributedText = "Splash.Name".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
